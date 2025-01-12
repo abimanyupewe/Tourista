@@ -1,0 +1,33 @@
+* {
+    font-family: 'Poppins';
+}
+/* color */
+.bg-coklat {
+    background-color: #DEAA79;
+}
+
+/* color end */
+
+/* nav */
+ul li .nav-link:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #DEAA79;
+    color: #DEAA79;
+}
+
+.btn-login:hover{
+    background-color: #DEAA79;
+    color: #fff;
+}
+/* nav end */
+
+/* info */
+.info {
+    height: 130px;
+}
+/* info end */
