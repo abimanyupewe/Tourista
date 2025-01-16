@@ -30,7 +30,7 @@ ul li .nav-link:hover {
   justify-items: center;
   color: white;
   border: #fff 1px solid;
-  padding: 10px 80px 10px 50px;
+  padding: 5px 80px 5px 45px;
   border-radius: 50px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -42,7 +42,7 @@ ul li .nav-link:hover {
   width: 80px;
   color: black;
   border: #fff 1px solid;
-  padding: 10px 80px 10px 50px;
+  padding: 5px 80px 5px 45px;
   border-radius: 50px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -88,7 +88,7 @@ ul li .nav-link:hover {
   bottom: 0;
   right: 0;
   margin: auto;
-  margin-top: 880px;
+  margin-top: 560px;
   width: 50%;
   height: 150px;
   border-radius: 10px;
@@ -97,9 +97,15 @@ ul li .nav-link:hover {
 
 /* info end */
 
-/* produk */
-.produk {
-  margin-top: 180px;
+/* destination */
+.destination {
+  margin-top: 130px;
   margin-bottom: 150px;
 }
-/* produk end */
+/* destination end */
+
+/* footer */
+.footer {
+  background-color: #021526;
+}
+/* footer end */
