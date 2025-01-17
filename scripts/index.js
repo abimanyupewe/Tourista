@@ -9,3 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// search
+// Function to handle dropdown selection
+function setupDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    const items = dropdown.nextElementSibling.querySelectorAll('.dropdown-item');
+
+    items.forEach(item => {
+      item.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default behavior
+        const selectedText = this.textContent; // Get item text
+        dropdown.textContent = selectedText; // Update button text
+      });
+    });
+  }
+
+  // Setup all dropdowns
+  setupDropdown('destinationDropdown');
+  setupDropdown('budgetDropdown');
+  setupDropdown('typeDropdown');

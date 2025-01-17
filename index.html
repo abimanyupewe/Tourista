@@ -69,10 +69,14 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#Destination">Destination</a>
+                  <a class="nav-link text-white" href="#Destination"
+                    >Destination</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#Packages">Packages Tour</a>
+                  <a class="nav-link text-white" href="#Packages"
+                    >Packages Tour</a
+                  >
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -238,74 +242,131 @@
           </div>
         </div>
 
-        <div class="row column-gap-4">
-          <div class="card col">
+        <div class="row column-gap-1">
+          <div class="col">
             <img
-              src="assets/packages/malioboro.png"
+              src="assets/packages/malioboro-include.png"
               class="card-img-top"
               alt="..."
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
           </div>
-          <div class="card col">
+          <div class="col">
             <img
-              src="assets/packages/bali.png"
+              src="assets/packages/bali-include.png"
               class="card-img-top"
               alt="..."
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This card has supporting text below as a natural lead-in to
-                additional content.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
           </div>
-          <div class="card col">
+          <div class="col">
             <img
-              src="assets/packages/kawah-ijen.png"
+              src="assets/packages/kawah-ijen-include.png"
               class="card-img-top"
               alt="..."
-              style="object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
-        <button class="btn btn-outline-dark align-content-center mx-auto">
-          Show more
-        </button>
+        <div class="d-flex justify-content-center">
+          <button class="btn-biru-gelap">Show more</button>
+        </div>
       </div>
     </section>
     <!-- Packages end -->
 
     <!-- Travel Plans -->
-    <section id="Travel-Plans"></section>
+    <section id="Travel-Plans" class="mb-5">
+      <div class="container">
+        <div class="text-center">
+          <div>
+            <p class="fs-3 abu">Travel plans</p>
+          </div>
+          <div>
+            <h1 class="fw-bold">Enjoy the travel experience</h1>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Filter Section -->
+          <div class="col">
+            <div class="search row align-items-center">
+              <!-- Filter Label -->
+              <div class="col-sm-2">
+                <p class="mx-4 mb-0">Filter by</p>
+              </div>
+
+              <div class="col d-flex justify-content-end gap-2">
+                <!-- Destination Dropdown -->
+                <div>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-light dropdown-toggle"
+                      type="button"
+                      id="destinationDropdown"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Destination
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="destinationDropdown">
+                      <li><a class="dropdown-item" href="#" data-value="1">Bali</a></li>
+                      <li><a class="dropdown-item" href="#" data-value="2">Lombok</a></li>
+                      <li><a class="dropdown-item" href="#" data-value="3">Yogyakarta</a></li>
+                    </ul>
+                  </div>
+                </div>
+              
+                <!-- Budget Dropdown -->
+                <div>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-light dropdown-toggle"
+                      type="button"
+                      id="budgetDropdown"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Budget
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="budgetDropdown">
+                      <li><a class="dropdown-item" href="#" data-value="1">$500</a></li>
+                      <li><a class="dropdown-item" href="#" data-value="2">$1000</a></li>
+                      <li><a class="dropdown-item" href="#" data-value="3">$1500</a></li>
+                    </ul>
+                  </div>
+                </div>
+              
+                <!-- Type Dropdown -->
+                <div>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-light dropdown-toggle"
+                      type="button"
+                      id="typeDropdown"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Type
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                      <li><a class="dropdown-item" href="#" data-value="1">Adventure</a></li>
+                      <li><a class="dropdown-item" href="#" data-value="2">Relaxation</a></li>
+                      <li><a class="dropdown-item" href="#" data-value="3">Cultural</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- Search Button -->
+          <div class="col-sm-2">
+            <button class="btn btn-primary w-100">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Travel Plans end -->
     <section id=""></section>
 
+    <!-- footer -->
     <section id="Fotter" class="footer">
       <div class="container">
         <div>
@@ -318,6 +379,7 @@
         </div>
       </div>
     </section>
+    <!-- footer end -->
 
     <!-- aniamtion -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

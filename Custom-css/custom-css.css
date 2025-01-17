@@ -104,6 +104,40 @@ ul li .nav-link:hover {
 }
 /* destination end */
 
+/* package */
+.btn-biru-gelap {
+  color: white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease;
+  background-color: #021526;
+}
+.btn-biru-gelap:hover {
+  color: white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease;
+  background-color: #021526e5;
+}
+/* package end */
+
+/* search */
+.search {
+  background-color: #021526;
+  color: white;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.btn-dropdown-search {
+  width: 500px;
+  width: 50px;
+}
+/* search end */
+
 /* footer */
 .footer {
   background-color: #021526;
