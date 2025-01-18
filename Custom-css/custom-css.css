@@ -7,13 +7,20 @@
 }
 
 .kuning {
-  background-color: #fcf596;
+  color: #FFB200;
 }
 
 .abu {
   color: #8D8D8D;
 }
 
+.biru {
+  color: #7E94FF;
+}
+
+.biru-tua {
+ background-color: #021526;
+}
 /* color end */
 
 /* nav */
@@ -100,7 +107,7 @@ ul li .nav-link:hover {
 /* destination */
 .destination {
   margin-top: 130px;
-  margin-bottom: 150px;
+  margin-bottom: 10px;
 }
 /* destination end */
 
@@ -132,14 +139,107 @@ ul li .nav-link:hover {
   border-radius: 10px;
 }
 
-.btn-dropdown-search {
-  width: 500px;
-  width: 50px;
+.btn-biru-gelap-search {
+  color: white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+  background-color: #021526;
 }
+.btn-biru-gelap-search:hover {
+  color: white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+  background-color: #021526e5;
+}
+
+/* slider */
+/* Container slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Slider wrapper */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 350px;
+}
+
+/* Setiap slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Tombol navigasi */
+.prev, .next {
+  position: absolute;
+  top: 92%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.next {
+  margin-left: 50px;
+}
+
+/* Hover efek untuk tombol */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* search end */
+
+/* bobby */
+.btn-ask-bobby{
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 50px;
+  border: 1px solid white;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.btn-ask-bobby:hover{
+  color: #021526;
+  padding: 10px 20px 10px 20px;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease;
+  background-color: white;
+}
+/* bobby end */
+
+/* contact */
+
+/* contact end */
 
 /* footer */
 .footer {
   background-color: #021526;
+}
+
+.nav-foot ul li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-foot ul li a:hover {
+  text-decoration: underline;
+  color: white;
 }
 /* footer end */

@@ -78,6 +78,11 @@
                     >Packages Tour</a
                   >
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#Travel-Plans"
+                    >Travel Plans</a
+                  >
+                </li>
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle text-white"
@@ -90,10 +95,10 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#Blog">Blog</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Another Action</a>
+                      <a class="dropdown-item" href="#Faq">FAQ</a>
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
@@ -101,12 +106,15 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">About</a>
-                </li>
               </ul>
               <!-- Tombol Login -->
-              <button class="btn-login ms-auto" type="button">Login</button>
+              <button
+                class="btn-login ms-auto"
+                type="button"
+                onclick="window.location.href='auth/login.html'"
+              >
+                Login
+              </button>
             </div>
           </div>
         </nav>
@@ -118,6 +126,7 @@
             background-image: url('assets/bg/Tourista.png');
             background-size: cover;
             background-position: center;
+            border-radius: 0px 0px 30px 30px;
           "
         >
           <div
@@ -130,7 +139,181 @@
               <p class="lead text-white fw-light">
                 Let's start exploring Indonesia.
               </p>
-              <button class="btn-explore">Explore</button>
+              <button class="btn-explore" data-bs-toggle="modal" data-bs-target="#exampleModal">Booking</button>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <!-- Header Modal -->
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLabel">
+                    Pemesanan Tour dan Kamar
+                  </h2>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <!-- Body Modal -->
+                <div class="modal-body">
+                  <p class="text-center mb-5">
+                    Isi form di bawah untuk memesan tour dan kamar. Kami akan
+                    mengonfirmasi pesanan Anda setelah menerima informasi
+                    lengkap Anda.
+                  </p>
+                  <form>
+                    <!-- Nama Lengkap -->
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Nama Lengkap</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                      />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Masukkan alamat email"
+                        required
+                      />
+                    </div>
+
+                    <!-- Nomor Telepon -->
+                    <div class="mb-3">
+                      <label for="phone" class="form-label"
+                        >Nomor Telepon</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Masukkan nomor telepon"
+                        required
+                      />
+                    </div>
+
+                    <!-- Pilihan Tour -->
+                    <div class="mb-3">
+                      <label for="tour" class="form-label">Pilih Tour</label>
+                      <select class="form-select" id="tour" required>
+                        <option value="" disabled selected>
+                          Pilih tour yang ingin diikuti
+                        </option>
+                        <option value="tour1">Tour 1 - Pantai Eksotik</option>
+                        <option value="tour2">
+                          Tour 2 - Petualangan Gunung
+                        </option>
+                        <option value="tour3">Tour 3 - Wisata Sejarah</option>
+                      </select>
+                    </div>
+
+                    <!-- Tanggal Tour -->
+                    <div class="mb-3">
+                      <label for="tourDate" class="form-label"
+                        >Tanggal Tour</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="tourDate"
+                        required
+                      />
+                    </div>
+
+                    <!-- Jumlah Orang -->
+                    <div class="mb-3">
+                      <label for="guests" class="form-label"
+                        >Jumlah Orang</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="guests"
+                        placeholder="Masukkan jumlah orang"
+                        required
+                      />
+                    </div>
+
+                    <!-- Pilihan Kamar -->
+                    <div class="mb-3">
+                      <label for="room" class="form-label">Pilih Kamar</label>
+                      <select class="form-select" id="room" required>
+                        <option value="" disabled selected>
+                          Pilih jenis kamar
+                        </option>
+                        <option value="single">Kamar Single</option>
+                        <option value="double">Kamar Double</option>
+                        <option value="suite">Suite Room</option>
+                      </select>
+                    </div>
+
+                    <!-- Tanggal Check-In -->
+                    <div class="mb-3">
+                      <label for="checkInDate" class="form-label"
+                        >Tanggal Check-In</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="checkInDate"
+                        required
+                      />
+                    </div>
+
+                    <!-- Tanggal Check-Out -->
+                    <div class="mb-3">
+                      <label for="checkOutDate" class="form-label"
+                        >Tanggal Check-Out</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="checkOutDate"
+                        required
+                      />
+                    </div>
+
+                    <!-- Pesan Tambahan -->
+                    <div class="mb-3">
+                      <label for="message" class="form-label"
+                        >Pesan Tambahan</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="3"
+                        placeholder="Masukkan pesan atau permintaan khusus (opsional)"
+                      ></textarea>
+                    </div>
+
+                    <!-- Tombol Submit -->
+                    <div class="d-grid gap-2">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        Kirim Pemesanan
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -180,38 +363,38 @@
 
         <div class="container text-center mx-auto">
           <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6 mb-4">
               <!-- Image 1 -->
               <div>
                 <img
                   src="assets/popural-destination/bromo.png"
-                  alt=""
-                  style="width: 100%; height: 100%; object-fit: cover"
+                  alt="Bromo"
+                  class="w-100 h-100 object-cover"
                 />
               </div>
               <div>
                 <img
                   src="assets/popural-destination/papua.png"
-                  alt=""
-                  style="width: 100%; height: 100%; object-fit: cover"
+                  alt="Papua"
+                  class="w-100 h-100 object-cover"
                 />
               </div>
             </div>
 
-            <div class="col">
-              <!-- Image 1 -->
-              <div class="">
+            <div class="col-12 col-md-6 mb-4">
+              <!-- Image 2 -->
+              <div>
                 <img
                   src="assets/popural-destination/bali.png"
-                  alt=""
-                  style="width: 100%; height: 100%; object-fit: cover"
+                  alt="Bali"
+                  class="w-100 h-100 object-cover"
                 />
               </div>
-              <div class="">
+              <div>
                 <img
                   src="assets/popural-destination/ntt.png"
-                  alt=""
-                  style="width: 100%; height: 100%; object-fit: cover"
+                  alt="NTT"
+                  class="w-100 h-100 object-cover"
                 />
               </div>
             </div>
@@ -225,7 +408,7 @@
     <section id="Packages">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-12 col-md-6">
             <div>
               <p class="fs-3 abu">Tour Packages</p>
             </div>
@@ -233,7 +416,7 @@
               <h1 class="fw-bold">Meet your travel needs</h1>
             </div>
           </div>
-          <div class="col">
+          <div class="col-12 col-md-6">
             <p class="fs-4 abu">
               With Travel Packages, you can enjoy a more practical and
               economical holiday, because all the travel details have been
@@ -242,30 +425,31 @@
           </div>
         </div>
 
-        <div class="row column-gap-1">
+        <div class="row row-cols-1 row-cols-md-3 g-3 mt-4">
           <div class="col">
             <img
               src="assets/packages/malioboro-include.png"
-              class="card-img-top"
-              alt="..."
+              class="card-img-top w-100"
+              alt="Malioboro Package"
             />
           </div>
           <div class="col">
             <img
               src="assets/packages/bali-include.png"
-              class="card-img-top"
-              alt="..."
+              class="card-img-top w-100"
+              alt="Bali Package"
             />
           </div>
           <div class="col">
             <img
               src="assets/packages/kawah-ijen-include.png"
-              class="card-img-top"
-              alt="..."
+              class="card-img-top w-100"
+              alt="Kawah Ijen Package"
             />
           </div>
         </div>
-        <div class="d-flex justify-content-center">
+
+        <div class="d-flex justify-content-center mt-4">
           <button class="btn-biru-gelap">Show more</button>
         </div>
       </div>
@@ -273,108 +457,412 @@
     <!-- Packages end -->
 
     <!-- Travel Plans -->
-    <section id="Travel-Plans" class="mb-5">
+    <section id="Travel-Plans" class="mb-5 mt-5">
       <div class="container">
-        <div class="text-center">
-          <div>
-            <p class="fs-3 abu">Travel plans</p>
-          </div>
-          <div>
-            <h1 class="fw-bold">Enjoy the travel experience</h1>
-          </div>
+        <div class="text-center mb-4">
+          <p class="fs-3 abu">Travel plans</p>
+          <h1 class="fw-bold">Enjoy the travel experience</h1>
         </div>
-        <div class="row">
+
+        <div class="row mb-4">
           <!-- Filter Section -->
-          <div class="col">
+          <div class="col-12 col-md-10">
             <div class="search row align-items-center">
               <!-- Filter Label -->
-              <div class="col-sm-2">
+              <div class="col-4 col-sm-2">
                 <p class="mx-4 mb-0">Filter by</p>
               </div>
-
-              <div class="col d-flex justify-content-end gap-2">
+              <div class="col-8 col-sm-10 d-flex justify-content-end gap-2">
                 <!-- Destination Dropdown -->
-                <div>
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-light dropdown-toggle"
-                      type="button"
-                      id="destinationDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Destination
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="destinationDropdown">
-                      <li><a class="dropdown-item" href="#" data-value="1">Bali</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="2">Lombok</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="3">Yogyakarta</a></li>
-                    </ul>
-                  </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-light dropdown-toggle"
+                    type="button"
+                    id="destinationDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Destination
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="destinationDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Bali</a></li>
+                    <li><a class="dropdown-item" href="#">Lombok</a></li>
+                    <li><a class="dropdown-item" href="#">Yogyakarta</a></li>
+                  </ul>
                 </div>
-              
+
                 <!-- Budget Dropdown -->
-                <div>
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-light dropdown-toggle"
-                      type="button"
-                      id="budgetDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Budget
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="budgetDropdown">
-                      <li><a class="dropdown-item" href="#" data-value="1">$500</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="2">$1000</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="3">$1500</a></li>
-                    </ul>
-                  </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-light dropdown-toggle"
+                    type="button"
+                    id="budgetDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Budget
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="budgetDropdown">
+                    <li><a class="dropdown-item" href="#">$500</a></li>
+                    <li><a class="dropdown-item" href="#">$1000</a></li>
+                    <li><a class="dropdown-item" href="#">$1500</a></li>
+                  </ul>
                 </div>
-              
+
                 <!-- Type Dropdown -->
-                <div>
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-light dropdown-toggle"
-                      type="button"
-                      id="typeDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Type
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="typeDropdown">
-                      <li><a class="dropdown-item" href="#" data-value="1">Adventure</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="2">Relaxation</a></li>
-                      <li><a class="dropdown-item" href="#" data-value="3">Cultural</a></li>
-                    </ul>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-light dropdown-toggle"
+                    type="button"
+                    id="typeDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Type
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                    <li><a class="dropdown-item" href="#">Adventure</a></li>
+                    <li><a class="dropdown-item" href="#">Relaxation</a></li>
+                    <li><a class="dropdown-item" href="#">Cultural</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Button -->
+          <div class="col-12 col-md-2 mb-3 mb-md-0">
+            <button
+              class="btn-biru-gelap-search d-flex align-items-center w-100"
+            >
+              <i data-feather="search" class="me-2"></i>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Slider Section -->
+        <div class="slider-container mt-3">
+          <div class="slider d-flex gap-4">
+            <!-- Slide 1 -->
+            <div class="slide w-80">
+              <div class="card" style="max-width: 700px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="assets/travel-plans/hotel-tentrem.png"
+                      class="img-fluid h-100"
+                      alt="Hotel Tentrem"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Hotel Tentrem, Yogyakarta</h5>
+                      <p class="card-text biru">
+                        <i data-feather="map-pin" class="me-1"></i>Sinduadi,
+                        Yogyakarta - 1.0 Km to Center
+                      </p>
+                      <p class="card-text abu col-md-6">
+                        Get high reviews from business people
+                      </p>
+                      <div class="row align-items-center mt-5">
+                        <div class="col d-flex align-items-center">
+                          <i data-feather="star" class="me-1 kuning"></i>
+                          <span class="text-black">5.0</span>
+                        </div>
+                        <div class="col text-end">
+                          <p
+                            class="abu mb-0"
+                            style="text-decoration: line-through"
+                          >
+                            $352.93
+                          </p>
+                          <p class="fw-bold">$283.66</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide w-80">
+              <div class="card" style="max-width: 700px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="assets/travel-plans/hotel-batu.png"
+                      class="img-fluid h-100"
+                      alt="Hotel Other"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Golden hill by golden tulip Batu City, East Java
+                      </h5>
+                      <p class="card-text biru">
+                        <i data-feather="map-pin" class="me-1"></i>Cozy Villa
+                        Batu, Jl. Raya Oro-Oro Ombo No.11, Temas, Batu City
+                      </p>
+                      <p class="card-text abu">
+                        Get high reviews from individuals
+                      </p>
+                      <div class="row align-items-center mt-5">
+                        <div class="col d-flex align-items-center">
+                          <i data-feather="star" class="me-1 kuning"></i>
+                          <span class="text-black">4.8</span>
+                        </div>
+                        <div class="col text-end">
+                          <p
+                            class="abu mb-0"
+                            style="text-decoration: line-through"
+                          >
+                            $420.00
+                          </p>
+                          <p class="fw-bold">$283,66</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Search Button -->
-          <div class="col-sm-2">
-            <button class="btn btn-primary w-100">Search</button>
+
+          <!-- Navigation Buttons -->
+          <div class="d-flex justify-content-between">
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <button class="next" onclick="nextSlide()">❯</button>
           </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn-biru-gelap">Show more</button>
         </div>
       </div>
     </section>
     <!-- Travel Plans end -->
-    <section id=""></section>
+
+    <!-- Blog -->
+    <section id="Blog" class="mb-5 mt-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <p class="fs-3 abu">Our blog</p>
+          <h1 class="fw-bold">Enjoy the travel experience</h1>
+        </div>
+
+        <!-- Bagian Slider -->
+        <div class="slider-container mt-3">
+          <div class="slider-wrapper-blog d-flex gap-4">
+            <!-- Slide 1 -->
+            <div class="slide w-80">
+              <div class="card" style="max-width: 700px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="assets/our-blog/blog-1.png"
+                      class="img-fluid h-100"
+                      alt="blog-1"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <p class="card-text">23/09/2024</p>
+                      <h5 class="card-title">Tips Traveling</h5>
+                      <p class="card-text abu">
+                        Tips praktis untuk membuat perjalananmu lebih nyaman,
+                        aman, dan menyenangkan. Dari panduan packing hingga trik
+                        hemat perjalanan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide w-100">
+              <div class="card" style="max-width: 700px; height: 180px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="assets/our-blog/blog-2.png"
+                      class="img-fluid"
+                      style="height: 180px"
+                      alt="blog 2"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <p class="card-text">23/09/2024</p>
+                      <h5 class="card-title">Perjalanan Kuliner di Lombok</h5>
+                      <p class="card-text abu mt-2">
+                        Jelajahi cita rasa autentik Lombok, dari hidangan
+                        tradisional hingga variasi masakan Indonesia modern.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Navigasi -->
+          <div class="d-flex justify-content-between">
+            <button class="prev" onclick="prevSlideBlog()">❮</button>
+            <button class="next" onclick="nextSlideBlog()">❯</button>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn-biru-gelap">Show more</button>
+        </div>
+      </div>
+    </section>
+    <!-- Blog end -->
+
+    <!-- Tourista AI -->
+    <section id="Faq" class="biru-tua p-lg-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Kolom Gambar -->
+          <div class="col-md-4 text-center">
+            <img
+              src="assets/tourista-ai/boby.png"
+              class="img-thumbnail"
+              alt="Bobby AI"
+            />
+          </div>
+
+          <!-- Kolom Teks -->
+          <div class="col-md-6 text-white">
+            <p class="fs-5 abu">Tourista AI</p>
+            <h1 class="fw-bold">Ask anything! <br />Bobby is ready to help</h1>
+          </div>
+
+          <!-- Kolom Tombol -->
+          <div class="col-md-2 text-center">
+            <button class="btn-ask-bobby">Ask Bobby</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tourista AI end -->
+
+    <!-- contact -->
+    <section id="contact" class="biru-tua p-2">
+      <div class="container">
+        <div class="text-center mb-5 text-white">
+          <h2 class="fw-bold">About us</h2>
+          <p class="">
+            Your journey, our inspiration. Tourista is here to take you to your
+            dream destinations with personal and professional service.
+          </p>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6 mb-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2732686745953!2d112.59978827412365!3d-7.970684979450359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788386cc44a703%3A0x9e670fb025241fe4!2sPunden%20Kalisongo!5e0!3m2!1sid!2sid!4v1737188494245!5m2!1sid!2sid"
+              class="rounded-2"
+              width="100%"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-md-6 mb-4 text-white">
+            <h4 class="fw-bold">Get In Touch</h4>
+            <p class="text-white">
+              At Tourista, we aim to transform your travel aspirations into
+              reality by providing expert guidance, innovative solutions, and a
+              personal touch.
+            </p>
+            <ul class="list-unstyled text-white">
+              <li>
+                <i data-feather="mail" class="me-2"></i>
+                toristajourney@gmail.com
+              </li>
+              <li>
+                <i data-feather="instagram" class="me-2"></i>
+                tourista
+              </li>
+              <li><i data-feather="phone" class="me-2"></i> +123 456 7890</li>
+              <li>
+                <i data-feather="map-pin" class="me-2"></i> Jl. Dieng Atas,
+                Sumberjo Gang 1, Malang, East Java
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact end -->
 
     <!-- footer -->
     <section id="Fotter" class="footer">
       <div class="container">
-        <div>
-          <div class="row">
-            <div class="col">
-              <hr class="text-white" width="100%" />
-              <p class="text-white">&copy;Tourista</p>
+        <div class="row justify-content-between">
+          <div class="col row">
+            <div class="col-md-6 nav-foot">
+              <p class="abu">NAVIGATION</p>
+              <ul class="list-unstyled text-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#Destination">Destination</a></li>
+                <li><a href="#Packages">Package Tour</a></li>
+                <li><a href="#Travel-Plans">Travel Plans</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
             </div>
+            <div class="col-md-6 nav-foot">
+              <p class="abu">SUPPORT</p>
+              <ul class="list-unstyled text-white">
+                <li><a href="#Faq">FAQ</a></li>
+                <li><a href="#Faq">Tourista AI</a></li>
+                <li><a href="">Whatsapp Center</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col"></div>
+          <div class="col text-white">
+            <p>Tourista tribe</p>
+            <p class="col">
+              Join our traveler community and receive travel updates and
+              recommendations for the best places.
+            </p>
+            <form>
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-outline-light">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr class="text-white" width="100%" />
+            <p class="text-white">&copy;Tourista - Journey</p>
           </div>
         </div>
       </div>
@@ -405,5 +893,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- bootstrap end -->
+
+     <!-- pooper -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+     <!-- pooper end -->
   </body>
 </html>

@@ -1,0 +1,11 @@
+.bg-image {
+    background-image: url('../assets/bg/Tourista.png');
+    background-size: cover;  /* Membuat gambar memenuhi seluruh area */
+    background-position: center;  /* Memastikan gambar tetap terpusat */
+    height: 100vh; /* Menyesuaikan tinggi dengan viewport */
+  }
+  
+  #login .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

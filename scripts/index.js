@@ -29,3 +29,74 @@ function setupDropdown(dropdownId) {
   setupDropdown('destinationDropdown');
   setupDropdown('budgetDropdown');
   setupDropdown('typeDropdown');
+
+// slider
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  // Pastikan index dalam rentang valid
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  // Geser slider ke posisi yang benar
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Render Feather Icons
+feather.replace();
+// search end
+
+// blog
+let currentSlideBlog = 0;
+
+// Fungsi untuk menampilkan slide blog
+function showSlideBlog(index) {
+  const sliderWrapperBlog = document.querySelector('.slider-wrapper-blog'); // Wrapper khusus untuk blog
+  const slidesBlog = document.querySelectorAll('.slider-wrapper-blog .slide');
+  const totalSlidesBlog = slidesBlog.length;
+
+  // Validasi indeks
+  if (index >= totalSlidesBlog) {
+    currentSlideBlog = 0;
+  } else if (index < 0) {
+    currentSlideBlog = totalSlidesBlog - 1;
+  } else {
+    currentSlideBlog = index;
+  }
+
+  // Geser slider blog
+  sliderWrapperBlog.style.transition = 'transform 0.5s ease';
+  sliderWrapperBlog.style.transform = `translateX(-${currentSlideBlog * 100}%)`;
+}
+
+// Fungsi untuk menggeser ke slide berikutnya
+function nextSlideBlog() {
+  showSlideBlog(currentSlideBlog + 1);
+}
+
+// Fungsi untuk menggeser ke slide sebelumnya
+function prevSlideBlog() {
+  showSlideBlog(currentSlideBlog - 1);
+}
+
+// Inisialisasi slide pertama
+showSlideBlog(currentSlideBlog);
+
+// blog end
