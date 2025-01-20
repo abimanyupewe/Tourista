@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking</title>
 
-    <link rel="stylesheet" href="../Custom-css/login.css" />
+    <link rel="stylesheet" href="Custom-css/custom-css.css" />
 
     <!-- bootstrap -->
     <link
@@ -35,94 +35,109 @@
     }
   </style>
   <body>
-    s<section id="booking" class="container py-5">
-        <h2 class="text-center mb-4">Pemesanan Tour dan Kamar</h2>
-        <p class="text-center mb-5">Isi form di bawah untuk memesan tour dan kamar. Kami akan mengonfirmasi pesanan Anda setelah menerima informasi lengkap Anda.</p>
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6">
-            <div class="card shadow p-4">
-              <div class="card-body">
-                <form>
-                  <!-- Nama Lengkap -->
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap" required />
+    <section id="booking" class="p-3">
+      <a href="index.html" class="d-flex text-black fs-3">Tourista</a>
+      <h2 class="text-center mb-4 display-5 fw-bold text-primary">
+        Pemesanan Tour dan Kamar
+      </h2>
+      <p class="text-center mb-5 text-muted">
+        Isi form di bawah untuk memesan tour dan kamar. Kami akan mengonfirmasi pesanan Anda setelah menerima informasi lengkap Anda.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body p-5">
+              <form>
+                <div class="row">
+                  <!-- Kolom Kiri -->
+                  <div class="col-md-6">
+                    <!-- Nama Lengkap -->
+                    <div class="mb-4">
+                      <label for="name" class="form-label">Nama Lengkap</label>
+                      <input type="text" class="form-control rounded-3" id="name" placeholder="Masukkan nama lengkap" required />
+                    </div>
+    
+                    <!-- Email -->
+                    <div class="mb-4">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control rounded-3" id="email" placeholder="Masukkan alamat email" required />
+                    </div>
+    
+                    <!-- Nomor Telepon -->
+                    <div class="mb-4">
+                      <label for="phone" class="form-label">Nomor Telepon</label>
+                      <input type="tel" class="form-control rounded-3" id="phone" placeholder="Masukkan nomor telepon" required />
+                    </div>
+    
+                    <!-- Pilihan Tour -->
+                    <div class="mb-4">
+                      <label for="tour" class="form-label">Pilih Tour</label>
+                      <select class="form-select rounded-3" id="tour" required>
+                        <option value="" disabled selected>Pilih tour yang ingin diikuti</option>
+                        <option value="tour1">Tour 1 - Pantai Eksotik</option>
+                        <option value="tour2">Tour 2 - Petualangan Gunung</option>
+                        <option value="tour3">Tour 3 - Wisata Sejarah</option>
+                      </select>
+                    </div>
+    
+                    <!-- Tanggal Tour -->
+                    <div class="mb-4">
+                      <label for="tourDate" class="form-label">Tanggal Tour</label>
+                      <input type="date" class="form-control rounded-3" id="tourDate" required />
+                    </div>
                   </div>
-                  
-                  <!-- Email -->
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Masukkan alamat email" required />
+    
+                  <!-- Kolom Kanan -->
+                  <div class="col-md-6">
+                    <!-- Jumlah Orang -->
+                    <div class="mb-4">
+                      <label for="guests" class="form-label">Jumlah Orang</label>
+                      <input type="number" class="form-control rounded-3" id="guests" placeholder="Masukkan jumlah orang" required />
+                    </div>
+    
+                    <!-- Pilihan Kamar -->
+                    <div class="mb-4">
+                      <label for="room" class="form-label">Pilih Kamar</label>
+                      <select class="form-select rounded-3" id="room" required>
+                        <option value="" disabled selected>Pilih jenis kamar</option>
+                        <option value="single">Kamar Single</option>
+                        <option value="double">Kamar Double</option>
+                        <option value="suite">Suite Room</option>
+                      </select>
+                    </div>
+    
+                    <!-- Tanggal Check-In -->
+                    <div class="mb-4">
+                      <label for="checkInDate" class="form-label">Tanggal Check-In</label>
+                      <input type="date" class="form-control rounded-3" id="checkInDate" required />
+                    </div>
+    
+                    <!-- Tanggal Check-Out -->
+                    <div class="mb-4">
+                      <label for="checkOutDate" class="form-label">Tanggal Check-Out</label>
+                      <input type="date" class="form-control rounded-3" id="checkOutDate" required />
+                    </div>
+    
+                    <!-- Pesan Tambahan -->
+                    <div class="mb-4">
+                      <label for="message" class="form-label">Pesan Tambahan</label>
+                      <textarea class="form-control rounded-3" id="message" rows="3" placeholder="Masukkan pesan atau permintaan khusus (opsional)"></textarea>
+                    </div>
                   </div>
-                  
-                  <!-- Nomor Telepon -->
-                  <div class="mb-3">
-                    <label for="phone" class="form-label">Nomor Telepon</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Masukkan nomor telepon" required />
-                  </div>
-                  
-                  <!-- Pilihan Tour -->
-                  <div class="mb-3">
-                    <label for="tour" class="form-label">Pilih Tour</label>
-                    <select class="form-select" id="tour" required>
-                      <option value="" disabled selected>Pilih tour yang ingin diikuti</option>
-                      <option value="tour1">Tour 1 - Pantai Eksotik</option>
-                      <option value="tour2">Tour 2 - Petualangan Gunung</option>
-                      <option value="tour3">Tour 3 - Wisata Sejarah</option>
-                    </select>
-                  </div>
-      
-                  <!-- Tanggal Tour -->
-                  <div class="mb-3">
-                    <label for="tourDate" class="form-label">Tanggal Tour</label>
-                    <input type="date" class="form-control" id="tourDate" required />
-                  </div>
-      
-                  <!-- Jumlah Orang -->
-                  <div class="mb-3">
-                    <label for="guests" class="form-label">Jumlah Orang</label>
-                    <input type="number" class="form-control" id="guests" placeholder="Masukkan jumlah orang" required />
-                  </div>
-      
-                  <!-- Pilihan Kamar -->
-                  <div class="mb-3">
-                    <label for="room" class="form-label">Pilih Kamar</label>
-                    <select class="form-select" id="room" required>
-                      <option value="" disabled selected>Pilih jenis kamar</option>
-                      <option value="single">Kamar Single</option>
-                      <option value="double">Kamar Double</option>
-                      <option value="suite">Suite Room</option>
-                    </select>
-                  </div>
-      
-                  <!-- Tanggal Check-In -->
-                  <div class="mb-3">
-                    <label for="checkInDate" class="form-label">Tanggal Check-In</label>
-                    <input type="date" class="form-control" id="checkInDate" required />
-                  </div>
-      
-                  <!-- Tanggal Check-Out -->
-                  <div class="mb-3">
-                    <label for="checkOutDate" class="form-label">Tanggal Check-Out</label>
-                    <input type="date" class="form-control" id="checkOutDate" required />
-                  </div>
-      
-                  <!-- Pesan Tambahan -->
-                  <div class="mb-3">
-                    <label for="message" class="form-label">Pesan Tambahan</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="Masukkan pesan atau permintaan khusus (opsional)"></textarea>
-                  </div>
-      
-                  <!-- Tombol Submit -->
-                  <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg">Kirim Pemesanan</button>
-                  </div>
-                </form>
-              </div>
+                </div>
+    
+                <!-- Tombol Submit -->
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg rounded-3 fw-bold shadow-sm text-white">
+                    Booking
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>        
 
     <!-- icons -->
     <script>
