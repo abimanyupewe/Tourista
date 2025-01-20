@@ -9,6 +9,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+// nav end
+
+// info
+// Fungsi untuk animasi counter
+const counters = document.querySelectorAll('h1[data-target]');
+const speed = 10000; // Semakin kecil nilainya, semakin cepat animasinya
+
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText.replace(',', '');
+    const increment = target / speed;
+
+    if (current < target) {
+      counter.innerText = Math.ceil(current + increment).toLocaleString();
+      setTimeout(updateCount, 10);
+    } else {
+      counter.innerText = target.toLocaleString();
+    }
+  };
+
+  updateCount();
+});
+// info end
 
 // search
 // Function to handle dropdown selection
